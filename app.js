@@ -1,5 +1,5 @@
 const form = document.querySelector('#task-form');
-const tasklist = document.querySelector('.collect');
+const tasklist = document.querySelector('.collection');
 const clearbtn = document.querySelector('.clear-tasks');
 const filter = document.querySelector('#filter');
 const taskInput = document.querySelector('#task');
@@ -30,7 +30,6 @@ function addTask(e){
 
     link.className = 'delete-item secondary-content';
     link.innerHTML = '<i class="bi bi-trash"></i>';
-
     li.appendChild(link);
     tasklist.appendChild(li);
 
@@ -42,7 +41,10 @@ function addTask(e){
 
 function removeTask(e){
 
-    
-        console.log(e.target)
-    
+    if(target.parentElement.classList.contains('delete-item')){
+        
+        if(confirm('Are you sure ?')){
+            e.target.parentElement.parentElement.remove();
+        }
+    }
 }
