@@ -29,7 +29,7 @@ function addTask(e){
     const link = document.createElement('a');
 
     link.className = 'delete-item secondary-content';
-    link.innerHTML = '<i class="fas fa-trash"></i>';
+    link.innerHTML = '<i class="bi bi-trash"></i>';
 
     li.appendChild(link);
     tasklist.appendChild(li);
