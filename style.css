@@ -6,10 +6,15 @@ a{
     color: black;
     font-weight: bold;
 }
+
 html{
-    background-image: url('https://images.unsplash.com/photo-1575573550252-4bea31b9d485?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+    background-image: url('https://images.unsplash.com/photo-1550859492-d5da9d8e45f3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80');
     height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 .Title{
     font-family: 'Barlow', sans-serif;
     font-weight: bolder;
@@ -18,9 +23,15 @@ html{
 
 h3{
     font-family: 'Barlow', sans-serif;
+    font-weight: bold;
 }
+
 
 .card-action{
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     
+    
+}
+footer{
+    text-align: center;
 }

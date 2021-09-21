@@ -17,7 +17,7 @@
 
 <body>
 <div id="total"> 
-    <div id="container">
+    <div id="container" style="filter:alpha(opacity=80); opacity:0.8;">
         <div class="row">
             <div class="col s12">
                 <div id="main" class="card">
@@ -27,9 +27,9 @@
                             <form id="task-form">
                                 <div class="input-field col s12">
                                     <input type="text" name="task" id="task">
-                                    <label for="task">New task</label>
+                                    <label for="task" style="font-weight: bold;">New task</label>
                                 </div>
-                                <input type="submit" value="Add Task" class="btn">
+                                <input type="submit" value="Add Task" class="btn" style="font-weight: bold;">
                             </form>
                         </div>
                     </div>
@@ -37,21 +37,24 @@
                         <h3 id="task-id">Tasks</h3>
                         <div class="input-field col s12">
                             <input type="text" name="filter" id="filter">
-                            <label for="filter">Filter tasks</label>
+                            <label for="filter" style="font-weight: bold;">Filter tasks</label>
                         </div>
-
                         <ul class="collection"></ul>
-                        <ul><a class="clear-tasks btn red" href="#">Clear All</a></ul>
+                        <ul><a class="clear-tasks btn red" href="#" style="font-weight: bold;">Clear All</a></ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<p>Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pawel Czerwinski</a> on <a href="https://unsplash.com/s/photos/gradient?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  </p>
+
+
     <script src="app.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<footer>
+    <p style=>Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pawel Czerwinski</a> on <a href="https://unsplash.com/s/photos/gradient?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    </p>
+</footer>
 </body>
 </html>
