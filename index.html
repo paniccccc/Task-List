@@ -7,11 +7,16 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">-->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap" rel="stylesheet">
     <title>Task-List</title>
 </head>
+
 <body>
-    
+<div id="total"> 
     <div id="container">
         <div class="row">
             <div class="col s12">
@@ -29,24 +34,22 @@
                         </div>
                     </div>
                     <div class="card-action">
-                        <h5 id="task-id">Tasks</h5>
+                        <h3 id="task-id">Tasks</h3>
                         <div class="input-field col s12">
                             <input type="text" name="filter" id="filter">
                             <label for="filter">Filter tasks</label>
                         </div>
-                        <ul class="collection">
-                            <a class="clear-tasks btn red" href="#">Clear All</a>
-                        </ul>
+
+                        <ul class="collection"></ul>
+                        <ul><a class="clear-tasks btn red" href="#">Clear All</a></ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-
+</div>
+<p>Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pawel Czerwinski</a> on <a href="https://unsplash.com/s/photos/gradient?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  </p>
     <script src="app.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
