@@ -11,7 +11,7 @@ loadEventListeners();
 function loadEventListeners(){
 
     form.addEventListener('submit', addTask);
-    form.addEventListener('click', removeTask);
+    document.addEventListener('click', removeTask);
 }
 
 
@@ -29,7 +29,7 @@ function addTask(e){
     const link = document.createElement('a');
 
     link.className = 'delete-item secondary-content';
-    link.innerHTML = '<i class="bi bi-trash"></i>';
+    link.innerHTML = '<i class="bi bi-trash-fill"></i>';
     li.appendChild(link);
     tasklist.appendChild(li);
 
@@ -38,13 +38,10 @@ function addTask(e){
 }
 
 
-
-function removeTask(e){
-
-    if(target.parentElement.classList.contains('delete-item')){
-        
+function removeTask(e) {
+    if(e.target.parentElement.classList.contains("delete-item")){
         if(confirm('Are you sure ?')){
-            e.target.parentElement.parentElement.remove();
+           e.target.parentElement.parentElement.remove();
         }
     }
 }
