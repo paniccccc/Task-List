@@ -21,6 +21,18 @@ html{
     font-size: 48px;
 }
 
+#container{
+    filter:alpha(opacity=80); 
+    opacity:0.8; 
+    margin: auto; 
+    width: 60%; 
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    -webkit-box-shadow: 0px 10px 7px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 7px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 7px -3px rgba(0,0,0,0.75);
+}
 h3{
     font-family: 'Barlow', sans-serif;
     font-weight: bold;
