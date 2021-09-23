@@ -1,5 +1,5 @@
 # Taskr
- Simple task list made in JS
+ Simple task list app with persistent storage, made in JS
  
 https://taskrr-app.netlify.app/ 
 
