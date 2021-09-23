@@ -25,8 +25,10 @@ html{
     filter:alpha(opacity=80); 
     opacity:0.8; 
     margin: auto; 
-    width: 60%; 
-    padding: 10px;
+    width: 70%; 
+    margin-top: 20px;
+    padding: 1%;
+    border-radius: 10px;
     text-align: center;
     align-items: center;
     -webkit-box-shadow: 0px 10px 7px -3px rgba(0,0,0,0.75);
@@ -41,9 +43,4 @@ h3{
 
 .card-action{
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    
-    
-}
-footer{
-    text-align: center;
 }

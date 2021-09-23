@@ -14,6 +14,7 @@ function loadEventListeners(){
     document.addEventListener('click', removeTask);
     clearbtn.addEventListener('click', clearTasks);
     filter.addEventListener('keyup', filterTasks);
+    document.addEventListener('DOMContentLoaded',getTasks);
 }
 
 
@@ -35,6 +36,8 @@ function addTask(e){
     li.appendChild(link);
     tasklist.appendChild(li);
 
+    storeTask(taskInput.value);
+
     taskInput.value='';
     e.preventDefault();
 }
@@ -44,12 +47,82 @@ function removeTask(e) {
     if(e.target.parentElement.classList.contains("delete-item")){
         if(confirm('Are you sure ?')){
            e.target.parentElement.parentElement.remove();
+
+           removeTaskLS(e.target.parentElement.parentElement);
         }
     }
 }
 
+function removeTaskLS(taskItem){
+    let tasks;
+    if(localStorage.getItem('tasks')===null){
+        tasks=[];
+    }
+
+    else{
+        tasks=JSON.parse(localStorage.getItem('tasks'));
+    }
+    
+
+    tasks.forEach(function(tasks){
+        if(taskItem.textContent === task){
+            tasks.splice(index,1);
+        }
+    });
+
+    localStorage.setItem('tasks', JSON.stringify('tasks'));
+    
+}
+
+function storeTask(task){
+    let tasks;
+    if(localStorage.getItem('tasks')===null){
+        tasks=[];
+    }
+
+    else{
+        tasks=JSON.parse(localStorage.getItem('tasks'));
+    }
+    
+    tasks.push(task);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+function getTasks(){
+    let tasks;
+    if(localStorage.getItem('tasks')===null){
+        tasks=[];
+    }
+
+    else{
+        tasks=JSON.parse(localStorage.getItem('tasks'));
+    }
+    
+    tasks.forEach(function(task){
+    
+    const li = document.createElement('li');
+    li.className = 'collection-item';
+    li.appendChild(document.createTextNode(task));
+
+    const link = document.createElement('a');
+
+    link.className = 'delete-item secondary-content';
+    link.innerHTML = '<i class="bi bi-trash-fill"></i>';
+    li.appendChild(link);
+    tasklist.appendChild(li);
+         
+    })
+
+}
+
 function clearTasks(){
      tasklist.innerHTML='';
+
+     clearTasksLS();
+}
+
+function clearTasksLS(){
+    localStorage.clear();
 }
 
 function filterTasks(e){
