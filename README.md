@@ -1,4 +1,4 @@
-# Task-List
+# Taskr
  Simple task list made in JS
  
 https://taskrr-app.netlify.app/ 
